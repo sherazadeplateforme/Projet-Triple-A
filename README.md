@@ -63,3 +63,32 @@ Objectif du projet
 
 Créer un tableau de bord simple permettant de visualiser l’état du système à un instant T.
 
+Partie HTML/CSS
+Cette partie concerne la création de l’interface web pour afficher les statistiques système collectées par Python.
+
+Points clés
+
+Structure HTML sémantique : <header> avec titre et timestamp, <main> avec cartes (<section class="card">) pour chaque type de données, <footer> pour info de génération.
+
+Variables dynamiques : format {{variable_name}} (snake_case), remplacées par Python.
+
+Disposition et responsive : Grid pour les cartes (2 colonnes desktop, 1 colonne mobile), mobile-first, texte et padding en rem.
+
+Barres de progression et classes d’état :
+
+.status-ok → vert
+
+.status-warning → orange
+
+.status-error → rouge
+
+Les barres et labels changent selon la valeur CPU/RAM.
+
+Palette limitée et contraste suffisant : fond sombre, cartes violettes, accents colorés pour les états.
+
+Lisibilité : unités claires pour RAM, CPU, fichiers.
+
+Interaction avec Python : Python remplit les variables et applique les classes d’état pour afficher l’état correct des jauges.
+
+Résultat : un dashboard clair, structuré, responsive et facile à lire pour évaluer rapidement l’état du système.
+
