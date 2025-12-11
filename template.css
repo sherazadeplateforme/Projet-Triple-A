@@ -1,59 +1,56 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img { max-width: 100%; display: block; }
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", Arial, sans-serif;
-    background: #f3f4f7;
-    color: #222;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2b0030;
+  color:white;
+  padding: 1.25rem;
 }
 
-/* --- Header --- */
-h1 {
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 2.2rem;
-    font-weight: 700;
+header {
+  background-color: #3b0042;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  border: 0.125rem solid #b452ff;
+  text-align: center;
 }
 
-/* --- Cards sections --- */
-section {
-    background: white;
-    width: 70%;
-    margin: 25px auto;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.15s ease, box-shadow 0.2s ease;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
-/* Effet hover discret */
-section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 17px rgba(0,0,0,0.12);
+.card {
+  background-color: #3f0a40; 
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  border: 0.125rem solid #b452ff;
 }
 
-/* Titres des sections */
-h2 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  color: #ffffff;
 }
 
-/* --- Icônes --- */
-.icon {
-    font-size: 1.4rem;
+.card p {
+  margin: 0.3125rem 0;
+  color: #e5d5ff;
 }
 
-/* Texte infos */
-p {
-    margin: 4px 0;
-    line-height: 1.4rem;
+footer {
+  text-align: center;
+  margin-top: 1.25rem;
+  color: #c7b6ff;
 }
 
-/* Top 3 processus */
-ul {
-    margin-top: 10px;
-    padding-left: 20px;
+@media (max-width: 50rem) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
 
